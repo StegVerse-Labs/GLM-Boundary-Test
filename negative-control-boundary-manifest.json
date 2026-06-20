@@ -1,0 +1,34 @@
+{
+  "artifact_type": "negative-control-boundary-manifest",
+  "artifact_version": "0.1.0",
+  "artifact_id": "negative-control-boundary-manifest",
+  "issuer": "test:negative-control",
+  "purpose": "Deliberately invalid artifact used to confirm Boundary Test detects authority inheritance.",
+  "claims": [
+    {
+      "claim_id": "negative-control-001",
+      "claim": "This artifact incorrectly claims authority by adjacency.",
+      "authority_class": "invalid-test-claim"
+    }
+  ],
+  "non_claims": [
+    "This file is not a valid boundary artifact.",
+    "This file exists only to confirm the verifier fails unsafe cases."
+  ],
+  "authority_scope": {
+    "valid_for": [
+      "negative control testing only"
+    ],
+    "not_valid_for": [
+      "review approval",
+      "boundary preservation",
+      "runtime enforcement",
+      "external governance claims"
+    ],
+    "inherits_authority_from": [
+      "glm-boundary-placeholder"
+    ],
+    "grants_authority_to": []
+  },
+  "expected_boundary_test_result": "FAIL_AUTHORITY_INHERITANCE_DETECTED"
+}
