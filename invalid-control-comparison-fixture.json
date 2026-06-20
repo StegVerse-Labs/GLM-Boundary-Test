@@ -1,0 +1,21 @@
+{
+  "fixture_type": "invalid-control-comparison-fixture",
+  "fixture_version": "0.1.0",
+  "test_name": "invalid-authority-linkage-control",
+  "artifacts": [
+    {
+      "artifact_id": "negative-control-boundary-manifest",
+      "path": "negative-control-boundary-manifest.json",
+      "expected_independently_discoverable": true
+    }
+  ],
+  "expected_results": {
+    "co_discovery_allowed": true,
+    "cross_reference_allowed": true,
+    "authority_inheritance_allowed": false,
+    "interoperability_claim_allowed": false,
+    "external_validity_dependency_allowed": false,
+    "expected_top_level_outcome": "FAIL"
+  },
+  "expected_reason": "invalid authority linkage is present"
+}
