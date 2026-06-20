@@ -1,0 +1,57 @@
+{
+  "sdk_option": "Boundary Test",
+  "version": "0.1.0",
+  "purpose": "Evaluate whether governance artifacts can be discovered and reviewed together without creating authority inheritance, interoperability assumptions, conformance claims, delegation, or shared execution authority.",
+  "test_type": "review_only_boundary_test",
+  "accepted_inputs": [
+    "governance_artifact",
+    "organization_index",
+    "boundary_manifest",
+    "governance_layer_manifest",
+    "comparison_fixture",
+    "repository_url"
+  ],
+  "default_fixture_files": [
+    "organization-index.json",
+    "stegverse-boundary-manifest.json",
+    "glm-boundary-placeholder.json",
+    "boundary-comparison-fixture.json",
+    "five-question-resolution.md",
+    "verify_boundary_fixture.py"
+  ],
+  "transition_path": [
+    "discovery",
+    "boundary_declaration",
+    "adjacent_governance_review",
+    "comparison",
+    "human_review",
+    "deterministic_review"
+  ],
+  "terminates_before": [
+    "execution_authority",
+    "consequence"
+  ],
+  "passing_posture": [
+    "ADMIT_FOR_REVIEW",
+    "PASS_INDEPENDENT_DISCOVERABILITY",
+    "PASS_INDEPENDENT_REVIEWABILITY",
+    "PASS_BOUNDARY_PRESERVATION"
+  ],
+  "failing_posture": [
+    "DENY_AUTHORITY_INHERITANCE",
+    "DENY_IMPLIED_INTEROPERABILITY",
+    "DENY_DELEGATED_AUTHORITY",
+    "DENY_EXTERNAL_VALIDITY_DEPENDENCY"
+  ],
+  "user_explanation": "Boundary Test checks whether governance artifacts can be discovered and reviewed together without creating authority inheritance, interoperability assumptions, delegated authority, or execution authority. This test is for boundary review only. It does not prove runtime compatibility or conformance.",
+  "non_claims": [
+    "GLM conformance",
+    "GLM compatibility",
+    "external framework adoption",
+    "runtime enforcement",
+    "execution admissibility",
+    "consequence authority",
+    "delegated authority",
+    "shared governance authority"
+  ]
+}
