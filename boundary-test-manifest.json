@@ -1,0 +1,75 @@
+{
+  "repository": "StegVerse-Labs/Boundary-Test",
+  "artifact_type": "boundary-test-repository-manifest",
+  "artifact_version": "0.1.0",
+  "sdk_option": "Boundary Test",
+  "status": "review_only_fixture",
+  "primary_question": "Can adjacent governance artifacts be discovered and reviewed together while remaining independent sources of authority?",
+  "top_level_glm_adjacent_outcome": "REVIEW_ONLY",
+  "non_claims": [
+    "GLM conformance",
+    "GLM compatibility",
+    "GLM adoption",
+    "GLM endorsement",
+    "runtime interoperability",
+    "execution authority",
+    "delegated authority",
+    "consequence authority"
+  ],
+  "review_entrypoints": [
+    "repository-index.md",
+    "reviewer-handoff.md",
+    "release-readiness-checklist.md",
+    "boundary-test-user-guide.md",
+    "sdk-boundary-test.md"
+  ],
+  "core_artifacts": [
+    "organization-index.json",
+    "stegverse-boundary-manifest.json",
+    "glm-boundary-placeholder.json",
+    "boundary-comparison-fixture.json",
+    "five-question-resolution.md",
+    "test-plan.md"
+  ],
+  "sdk_artifacts": [
+    "boundary-test-option.json",
+    "boundary-test-outcomes.json",
+    "run_boundary_test.py",
+    "verify_boundary_fixture.py"
+  ],
+  "invalid_control_artifacts": [
+    "negative-control-boundary-manifest.json",
+    "invalid-control-comparison-fixture.json",
+    "invalid-control-notes.md",
+    "run_boundary_regression.py"
+  ],
+  "commands": [
+    {
+      "command": "python run_boundary_test.py",
+      "expected_top_level_outcome": "REVIEW_ONLY"
+    },
+    {
+      "command": "python run_boundary_regression.py",
+      "expected_regression_outcome": "PASS"
+    }
+  ],
+  "ci": {
+    "workflow_path_display": "github/workflows/boundary-test.yml",
+    "actual_path_uses_standard_github_actions_leading_dot_directory": true,
+    "runs_on": [
+      "push",
+      "pull_request",
+      "workflow_dispatch"
+    ]
+  },
+  "done_criteria": [
+    "REVIEW_ONLY outcome is documented",
+    "positive fixture exists",
+    "invalid-control fixture exists",
+    "local runners exist",
+    "CI workflow exists",
+    "reviewer handoff exists",
+    "release readiness checklist exists",
+    "no GLM conformance or interoperability claim is made"
+  ]
+}
