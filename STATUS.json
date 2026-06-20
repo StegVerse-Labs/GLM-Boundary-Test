@@ -1,0 +1,20 @@
+{
+  "repository": "StegVerse-Labs/Boundary-Test",
+  "version": "0.1.0",
+  "status": "READY_FOR_REVIEW",
+  "top_level_expected_outcome": "REVIEW_ONLY",
+  "boundary_checks_expected": "PASS",
+  "invalid_control_expected": "FAIL",
+  "review_posture": "review_only_fixture",
+  "sdk_option": "Boundary Test",
+  "non_claims": [
+    "GLM conformance",
+    "GLM compatibility",
+    "GLM adoption",
+    "GLM endorsement",
+    "runtime interoperability",
+    "delegated authority",
+    "execution authority",
+    "consequence authority"
+  ]
+}
