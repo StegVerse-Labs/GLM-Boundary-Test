@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "applies_to": "Boundary Test",
+  "outcome_classes": [
+    "REVIEW_ONLY",
+    "PASS",
+    "FAIL",
+    "INCOMPLETE"
+  ],
+  "preferred_glm_adjacent_outcome": "REVIEW_ONLY",
+  "glm_adjacent_result_template": {
+    "top_line": "REVIEW-ONLY: independently discoverable, independently reviewable, no authority inheritance detected.",
+    "boundary_checks": "PASS",
+    "conformance_claim": "NOT_MADE",
+    "interoperability_claim": "NOT_MADE",
+    "adoption_claim": "NOT_MADE",
+    "execution_authority": "NOT_GRANTED"
+  },
+  "rules": [
+    "Do not report a bare PASS as the final GLM-adjacent outcome.",
+    "Report REVIEW_ONLY first when artifacts are comparable but no conformance, interoperability, adoption, delegation, or execution authority claim is made.",
+    "Use PASS only for specific boundary checks.",
+    "Use FAIL when authority inheritance, delegation, implied interoperability, or external validity dependency is detected.",
+    "Use INCOMPLETE when claims, non-claims, or authority scope are missing."
+  ]
+}
