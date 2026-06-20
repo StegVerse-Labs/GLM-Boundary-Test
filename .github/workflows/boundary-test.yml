@@ -20,6 +20,9 @@ jobs:
       - name: Validate artifact schemas
         run: python validate_boundary_schemas.py
 
+      - name: Run example cases
+        run: python run_example_cases.py
+
       - name: Run review-only fixture
         run: python run_boundary_test.py
 
