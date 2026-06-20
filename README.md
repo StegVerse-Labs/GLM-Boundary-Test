@@ -47,6 +47,28 @@ SPE proves standing.
 Receipts bind every transition.
 ```
 
+## Result Receipt Rule
+
+Every route result must preserve the SDK intake manifest reference and SDK intake receipt reference.
+
+Route result receipts should conform to the SDK result receipt shape:
+
+```text
+StegVerse-org/StegVerse-SDK/schemas/formal-testing-route-result.schema.json
+```
+
+Minimum result receipt fields:
+
+```text
+schema_version
+route_id
+repository
+sdk_intake.dataset_manifest_hash
+sdk_intake.intake_receipt_id
+result
+route_receipt_id
+```
+
 ## GLM Test Case Posture
 
 The GLM boundary test case must be handled as an SDK-ingested formal test case, not as an isolated public claim.
