@@ -1,50 +1,51 @@
-GLM Boundary Test
+# Boundary Test
 
-Purpose
+## Purpose
 
-This repository contains a minimal governance-boundary test designed to evaluate whether independently published governance artifacts can be discovered and reviewed together without creating implied authority inheritance, interoperability, conformance, delegation, or execution authority.
+This repository is being held in a neutral remediation state.
 
-The repository is intended as a review and discussion artifact. It does not claim compatibility with, endorsement by, or adoption of any external governance framework, including GLM. Any comparison artifacts are provided solely for boundary-evaluation purposes.
+It is intended only as a private-review-first boundary test for evaluating whether independently authored governance artifacts can be discussed without creating implied authority inheritance, interoperability, conformance, delegation, endorsement, or execution authority.
 
-Core Question
+## Current Status
 
-Can adjacent governance artifacts remain independently authoritative while still being discoverable and reviewable together?
+```text
+status: neutralized_pending_private_review
+publication_posture: do_not_treat_as_external_standard_fixture
+review_posture: private_review_first
+```
 
-Success Criteria
+## Current Boundary Rule
 
-A passing result demonstrates:
+No public file, directory, placeholder, issuer reference, review step, or test-plan language in this repository should use a third-party standard name or personal attribution before private review has occurred and naming concerns have been addressed.
 
-* Independent discoverability
-* Independent reviewability
-* Explicit authority boundaries
-* No authority inheritance
-* No interoperability assumptions
-* No delegated authority
-* No implied conformance
+## Correct Working Order
 
-Repository Contents
+```text
+1. Draft privately.
+2. Share privately with the relevant reviewer.
+3. Resolve naming, attribution, and boundary concerns.
+4. Publish only after those concerns are settled.
+```
 
-File	Purpose
-organization-index.json	Organization-index declaration
-stegverse-boundary-manifest.json	StegVerse boundary declaration
-glm-boundary-placeholder.json	Placeholder comparison artifact
-boundary-comparison-fixture.json	Evaluation fixture
-five-question-resolution.md	Human-readable evaluation
-test-plan.md	Review procedure
-verify_boundary_fixture.py	Deterministic verifier
+## Non-Claims
 
-Scope
+This repository does not claim:
 
-This repository tests boundary behavior only.
+- compatibility with any external governance framework;
+- endorsement by any external reviewer;
+- adoption of any external standard;
+- certification;
+- conformance;
+- interoperability;
+- delegated authority;
+- shared execution authority;
+- authority inheritance;
+- personal participation by any reviewer.
 
-It does not test:
+## Scope
 
-* Runtime interoperability
-* Enforcement compatibility
-* Governance adoption
-* Shared execution authority
-* Framework conformance
+This repository should not be used as a public validation request, public comparison fixture, or public review target until the private-review-first sequence has been completed.
 
-Expected Outcome
+## Next Safe Step
 
-The fixture should demonstrate that adjacent governance artifacts can be reviewed together without creating shared authority or implied interoperability.
+Prepare any future boundary fixture privately, with neutral filenames and no personal issuer references, before asking for review or publishing any public artifact.
